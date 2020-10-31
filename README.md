@@ -29,6 +29,11 @@ Reentrant/Recursive Mutex:
 - `tryLock()` is a non-blocking version of the `lock()` method
 - `tryLock()` enables a thread to execute alternate operations if the lock it needs to acquire is already taken
 
+
+### Daemon
+
+Daemon thread is also considered as background thread. A daemon thread is detached from the main thread, which means it does not prevent the process from terminating.
+
 ### Flynn's Taxonomy
 
 Instruction Streams & Data Streams:
