@@ -66,3 +66,4 @@ Concurrency is the ability of a program to be broken into parts that can run ind
 ## Reference
 
 - Parallel and Concurrent Programming with Java 1: https://www.linkedin.com/learning/parallel-and-concurrent-programming-with-java-1/
+- A Clarified String Formatting Cheatsheet: https://dzone.com/articles/how-to-format-a-string-clarified

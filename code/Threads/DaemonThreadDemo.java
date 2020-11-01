@@ -33,7 +33,6 @@ public class DaemonThreadDemo {
         Thread.sleep(500);
 
         System.out.println("Chef\tfinished cooking.");
-
     }
 
 }

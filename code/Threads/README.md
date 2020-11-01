@@ -1,4 +1,9 @@
 
+- __ThreadDemo__: A basic `Thread` demo
+- __RunnableDemo__: A basic `Runnable` demo
+- __DaemonThreadDemo__: The daemon thread wouldn't affect the main thread from terminating
+
+
 In Java, there are two primary ways to run additional threads: 
 - Extending Thread class
 - Implementing Runnable interface
