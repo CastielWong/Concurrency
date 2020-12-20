@@ -1,5 +1,10 @@
 
 - [Concept](#concept)
+  - [Daemon](#daemon)
+  - [Flynn's Taxonomy](#flynns-taxonomy)
+  - [Process vs Thread](#process-vs-thread)
+  - [Concurrency vs Parallelism](#concurrency-vs-parallelism)
+  - [Mutex](#mutex)
 - [Reference](#reference)
 
 
@@ -14,20 +19,6 @@ Phases of life cycle of a thread:
 - terminated
 - WAITING (JAVA)
 - TIMED_WAITING (JAVA)
-
-Mutex (Mutual Exclusion) - Lock
-- Mechanism to implement mutual exclusion
-- Only one thread or process can possess at a time
-- Limit access to critical section
-- Synchronized: Easier to implement and prevents many pitfalls of locks
-- Locks: Provide more flexibility to implement certain algorithms
-
-Reentrant/Recursive Mutex:
-- Can be locked multiple times by the same thread
-- Must be unlocked as many times as it was locked
-- Common terms: Reentrant Lock, Recursive Mutex, Recursive Lock
-- `tryLock()` is a non-blocking version of the `lock()` method
-- `tryLock()` enables a thread to execute alternate operations if the lock it needs to acquire is already taken
 
 
 ### Daemon
@@ -61,6 +52,28 @@ Concurrency is the ability of a program to be broken into parts that can run ind
 | Program Structure | Simultaneous Execution |
 | DEALING with multiple things at once | DOING multiple things at once |
 | Use case: I/O dependent tasks, like graphical user interfaces | Use case: Computationally intensive tasks, like matrix multiplication |
+
+### Mutex
+
+Mutex (Mutual Exclusion), which is instituted for the purpose of preventing race conditions, is a property of concurrency control where lock is needed to come into play.
+
+Lock: 
+- Mechanism to implement mutual exclusion
+- Only one thread or process can possess at a time
+- Limit access to critical section
+- Synchronized: Easier to implement and prevents many pitfalls of locks
+- Locks: Provide more flexibility to implement certain algorithms
+
+Deadlock: All processes and threads are unable to continue executing.
+
+Reentrant Mutex:
+- Can be locked multiple times by the same thread
+- Must be unlocked as many times as it was locked
+- Synonymous terms: 
+    - Reentrant Lock
+    - Recursive Mutex
+    - Recursive Lock
+
 
 
 ## Reference

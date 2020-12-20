@@ -1,6 +1,7 @@
 
 public class DaemonThreadDemo {
     public static class Cleaner extends Thread {
+        @Override
         public void run() {
             while (true) {
                 System.out.println("Cleaner\tis doing cleaning");

@@ -6,6 +6,7 @@ public class ThreadInSynchronizedMethod extends Thread {
         counter++;
     }
 
+    @Override
     public void run() {
         for (int i = 0; i < 100_000; i++) {
             addCounter();

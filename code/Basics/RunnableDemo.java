@@ -10,13 +10,14 @@ public class RunnableDemo {
             this.name = name;
         }
 
+        @Override
         public void run() {
             while (chopping) {
                 System.out.println(this.name + " chopped a vegetable.");
                 counter++;
             }
             // counter cannot be accessed when it's converted to a Thread
-            System.out.printf("%s chopped %d vegetables.%n", this.name, this.counter);
+            System.out.printf("%s chopped %d vegetables.\n", this.name, this.counter);
         }
     }
 

@@ -10,6 +10,7 @@ public class ThreadDemo {
             this.setName(name);
         }
 
+        @Override
         public void run() {
             while (chopping) {
                 System.out.println(this.getName() + " chopped a vegetable.");
@@ -33,7 +34,7 @@ public class ThreadDemo {
         aaron.join();
         betty.join();
 
-        System.out.printf("Aaron chopped %d vegetables.%n", aaron.counter);
-        System.out.printf("Betty chopped %d vegetables.%n", betty.counter);
+        System.out.printf("Aaron chopped %d vegetables.\n", aaron.counter);
+        System.out.printf("Betty chopped %d vegetables.\n", betty.counter);
     }
 }
