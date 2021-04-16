@@ -5,6 +5,7 @@
   - [Process vs Thread](#process-vs-thread)
   - [Concurrency vs Parallelism](#concurrency-vs-parallelism)
   - [Mutex](#mutex)
+  - [Liveness](#liveness)
 - [Reference](#reference)
 
 
@@ -73,6 +74,25 @@ Reentrant Mutex:
     - Reentrant Lock
     - Recursive Mutex
     - Recursive Lock
+
+### Liveness
+
+Deadlock: Each member is waiting for another memeber to take action.
+
+Technique to prevent Deadlock:
+- __Lock Ordeing__: ensure locks are always taken in the same order by any thread
+- __Lock Timeout__: 
+  - put a timeout on lock attempts
+  - if a thread fail to acquire all locks within the time limit:
+    - back up and free all Locks
+    - wait for a random amount of time then try again
+
+Abandoned lock: If one thread or process acquires a lock, and then terminate because of some unexpected reason, it may not automatically release the lock before it disappears, which leaves other threads stuck waiting for a lock that would never be released.
+
+Starvation: A process or thread is perpetually denied the resources it needs.
+
+Livelock: Multiple threads or processes are actively responding to each other to resolve conflict, but that prevents them from making progress.
+
 
 
 
